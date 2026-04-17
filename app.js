@@ -399,6 +399,17 @@
      the fallback "Tap to Open" button if audio was blocked).
   ============================================================ */
 
+  var videoLoader = document.getElementById("videoLoader");
+
+  function hideVideoLoader() {
+    if (videoLoader) videoLoader.classList.add("hidden");
+  }
+
+  if (video) {
+    video.addEventListener("canplay", hideVideoLoader);
+    video.addEventListener("playing", hideVideoLoader);
+  }
+
   function startInvite(fromGesture) {
     fromGesture = Boolean(fromGesture);
     if (fromGesture) markInviteUnlocked();
