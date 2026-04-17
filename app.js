@@ -122,6 +122,7 @@
   try {
     if (isReloadNavigation) {
       sessionStorage.removeItem(SESSION_UNLOCK_KEY);
+      sessionStorage.removeItem(RETURN_STATE_KEY);
     }
     inviteUnlocked = sessionStorage.getItem(SESSION_UNLOCK_KEY) === "1";
   } catch (_) {}
