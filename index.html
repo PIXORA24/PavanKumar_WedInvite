@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#0f1e3d">
+
+<title>Pavan Kumar &amp; Lakshmi Teja Sri - Wedding Invitation</title>
+<meta name="description" content="With love, we invite you to celebrate our wedding. Your presence would mean the world to us. — Pavan Kumar &amp; Lakshmi Teja Sri, 29 April 2026.">
+
+<meta property="og:title"       content="Pavan Kumar &amp; Lakshmi Teja Sri Wedding Invitation">
+<meta property="og:description" content="With love, we invite you to celebrate our wedding. Your presence would mean the world to us. — Pavan Kumar &amp; Lakshmi Teja Sri, 29 April 2026.">
+<meta property="og:image"        content="https://pixora24.github.io/Pavan_wedding_Invite/assets/preview.jpg">
+<meta property="og:image:width"  content="1024">
+<meta property="og:image:height" content="1024">
+<meta property="og:type"         content="website">
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="Pavan Kumar &amp; Lakshmi Teja Sri Wedding Invitation">
+<meta name="twitter:image"       content="https://pixora24.github.io/Pavan_wedding_Invite/assets/preview.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<script>
+  (function () {
+    function getInviteStorageKey(suffix) {
+      var path = "/";
+      try {
+        path = window.location.pathname || "/";
+      } catch (_) {}
+      path = path.replace(/\/index\.html?$/i, "/").replace(/\/+$/, "") || "/";
+      return "invite:" + path + ":" + suffix;
+    }
+
+    var returnStateKey = getInviteStorageKey("return-state");
+    var unlockKey = getInviteStorageKey("unlock");
+
+    window.INVITE_STORAGE_KEYS = {
+      returnState: returnStateKey,
+      sessionUnlock: unlockKey
+    };
+
+    try {
+      var raw = sessionStorage.getItem(returnStateKey);
+      if (!raw) return;
+      var s = JSON.parse(raw);
+      if (!s || !s.envelopeOpened || !s.pendingReturn) return;
+      if (typeof s.savedAt !== "number" || Date.now() - s.savedAt > 30 * 60 * 1000) return;
+      document.documentElement.classList.add("returning-invite");
+    } catch (_) {}
+  })();
+</script>
+<style>
+  html.returning-invite #envelopeScreen { display: none !important; }
+  html.returning-invite #mainContent    { opacity: 1 !important; transform: none !important; }
+
+  .envelope { isolation: isolate; }
+  .envelope.opening      .envelope-flap   { transform: rotateX(180deg); }
+  .envelope.opening      .envelope-letter { opacity: 1; transform: translateY(-148%) scale(1.02); }
+  .envelope.letter-raised .envelope-flap  { z-index: 1; }
+  .envelope.letter-raised .envelope-letter { z-index: 6; transform: translateY(-148%) scale(1.02); }
+</style>
+</head>
+
+<body>
+
+<div id="envelopeScreen">
+  <div class="intro-arch" aria-hidden="true"></div>
+
+  <div class="bokeh-layer" aria-hidden="true">
+    <div class="bokeh b1"></div>
+    <div class="bokeh b2"></div>
+    <div class="bokeh b3"></div>
+    <div class="bokeh b4"></div>
+    <div class="bokeh b5"></div>
+    <div class="bokeh b6"></div>
+  </div>
+
+  <div class="sparkle-layer" aria-hidden="true">
+    <div class="sparkle s1"></div>
+    <div class="sparkle s2"></div>
+    <div class="sparkle s3"></div>
+    <div class="sparkle s4"></div>
+    <div class="sparkle s5"></div>
+    <div class="sparkle s6"></div>
+    <div class="sparkle s7"></div>
+    <div class="sparkle s8"></div>
+  </div>
+
+  <div class="envelope-wrapper">
+    <p class="intro-kicker">Wedding Invitation</p>
+
+    <div
+      class="envelope"
+      id="envelope"
+      role="button"
+      tabindex="0"
+      aria-label="Open the wedding invitation"
+    >
+      <div class="envelope-glow" aria-hidden="true"></div>
+
+      <div class="envelope-bg" aria-hidden="true"></div>
+      <div class="envelope-inner-shadow" aria-hidden="true"></div>
+
+      <div class="envelope-letter">
+        <p class="letter-invite">Together with our families</p>
+        <p class="letter-names">Pavan Kumar</p>
+        <p class="letter-amp">&amp;</p>
+        <p class="letter-names">Lakshmi Teja Sri</p>
+        <p class="letter-subtitle">29 April 2026 | 11:17 AM</p>
+      </div>
+
+      <div class="envelope-front" aria-hidden="true">
+        <span class="envelope-side-line envelope-side-line--left"></span>
+        <span class="envelope-side-line envelope-side-line--right"></span>
+      </div>
+      <div class="envelope-flap" aria-hidden="true">
+        <span class="ganesha-engraving">
+          <img class="ganesha-engraving-image" src="assets/ganesha_logo.webp" alt="">
+        </span>
+      </div>
+
+      <div class="wax-seal" aria-hidden="true">
+        <span class="seal-text">P<span class="seal-divider">&#10084;</span>L</span>
+      </div>
+
+      <div class="envelope-engraving" aria-hidden="true">Tap to open</div>
+    </div>
+
+    <div class="intro-copy">
+      <p class="intro-overline">A warm celebration of family, tradition, and new beginnings.</p>
+    </div>
+  </div>
+</div>
+
+<div id="goldenBurst" aria-hidden="true"></div>
+<div id="introTransition" aria-hidden="true"></div>
+<div id="navDim" aria-hidden="true"></div>
+
+<main id="mainContent">
+  <div class="invite-panel">
+    <div class="invite-frame">
+      <div id="overlay">
+        <div class="overlay-copy">
+          <button id="openBtn">Tap to Open</button>
+        </div>
+      </div>
+      <video id="video" playsinline muted preload="metadata" loop></video>
+    </div>
+
+    <div class="action-bar">
+      <a id="mapBtn" target="_blank" rel="noopener noreferrer">Directions</a>
+      <a id="calendarBtn" href="#">Add to Calendar</a>
+    </div>
+  </div>
+
+  <a id="studioLink" class="studio-link" target="_blank" rel="noopener" hidden>
+    <span id="studioLinkLabel" class="studio-link__label"></span>
+    <span class="studio-link__pill">
+      <span class="studio-link__row">
+        <svg class="studio-link__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
+          <circle cx="12" cy="12" r="4.1"></circle>
+          <circle cx="17.2" cy="6.8" r="1.1"></circle>
+        </svg>
+        <span id="studioLinkName" class="studio-link__name"></span>
+      </span>
+    </span>
+  </a>
+</main>
+
+<audio id="audio" preload="auto" loop></audio>
+
+<script src="site-config.js"></script>
+<script src="app.js"></script>
+<script src="ripple.js"></script>
+</body>
+</html>

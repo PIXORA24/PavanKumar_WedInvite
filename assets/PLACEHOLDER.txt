@@ -1,0 +1,11 @@
+== PRAJWAL WEDDING — MEDIA ASSETS ==
+
+Drop the following files into this folder once finalised:
+
+  video.mp4       — Invite video (plays on the invite page)
+  music.mp3       — Background music (loops on the invite page)
+  poster.webp     — Video poster / still frame (shown while video loads)
+  texture.webp    — Subtle paper texture overlay (optional, used in envelope screen)
+  preview.jpg     — OG / social share preview image (1200 x 630 px recommended)
+
+After adding files, update the paths in site-config.js → events[0].media
