@@ -571,7 +571,7 @@
      BUTTON EVENT LISTENERS
   ============================================================ */
 
-  envelope.addEventListener("click", openInvitation);
+  envelopeScreen.addEventListener("click", openInvitation);
 
   envelope.addEventListener("keydown", function (e) {
     if (e.key === "Enter" || e.key === " ") {
